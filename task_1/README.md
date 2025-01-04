@@ -23,6 +23,7 @@ This project requires Python 3.10+.
    git clone https://github.com/yourusername/mountain-names-ner.git
    cd mountain-names-ner
    
+   
 2. **Install required dependencies:**
    ```bash
    pip install -r requirements.txt
@@ -32,14 +33,17 @@ This project requires Python 3.10+.
 To train or fine-tune the NER model, run the following script:
 ```bash
 python training.py
+```
 
 **Inference Script:**
 To run the inference on a given sentence, use:
 ```bash
 python inference.py
+```
 
 **Demo Jupyter Notebook:**
 You can run the Jupyter notebook to see the entire process from dataset preparation to inference:
 ```bash
 jupyter notebook demo_notebook.ipynb
-   
+```
+
