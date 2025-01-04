@@ -52,6 +52,9 @@ The dataset used in this project contains labeled text data with mountain names 
   
 ### Data Creation Notebook (`dataset_creation.ipynb`)
 This script contains dataset creation from scraping websites, balanced mountain names replacing, tokenizing and bio taging.
+[Website 1](https://gikken.co/mate-translate/sentences/english/mountain)
+[Website 2](https://sentence.yourdictionary.com/mountain)
+[Website 3](https://sentence.yourdictionary.com/mountains)
 
 ### Model Training Script (`training.py`)
 This script fine-tunes a pre-trained BERT-based model for the NER task. The script loads the dataset, tokenizes the text, trains the model with appropriate configurations, saving each model on each epoch in `results_model/` and then saves the best model in `model_top/` folder based on epochs, saves trainer hisory (state) and evaluation results.
@@ -83,6 +86,7 @@ The evaluation of the NER best model from training process on validation set:
 | eval_steps_per_second      | 7.165                     |
 | epoch                      | 5.0                       |
 
+Overall, model is able to distinguish well between known mountains in sentences, whether it is one mountain or several mountains in a sentence. Also, compound mountain names (more than one word) she can distinguish well. Difficulties arise with local or specific mountain names, the model simply does not understand and sometimes misses such mountains
 
 ## Report
 A report containing potential improvements and further optimizations for this task is provided in a PDF file in the root directory.
