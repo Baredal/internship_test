@@ -1,7 +1,7 @@
 # Named Entity Recognition (NER) for Mountain Names
 
 ## Task Overview
-In this project, we developed a Named Entity Recognition (NER) model to identify mountain names within text. The task involved dataset creation, model selection, training/fine-tuning, and preparing demo code to showcase the model's inference capabilities. The solution is implemented in Python 3.10, with all relevant code and files provided in this repository.Code make it possible to save model locally but best trained model is already loaded on the Hugging Face, and used in inferences from Hugging Face so there is no need to train again and save model locally into folders.[Link to model weights](https://huggingface.co/Darebal/mountain-names-ner/tree/main)
+In this project, I developed a Named Entity Recognition (NER) model to identify mountain names within text. The task involved dataset creation, model selection, training/fine-tuning, and preparing demo code to showcase the model's inference capabilities. The solution is implemented in Python 3.10, with all relevant code and files provided in this repository. Code make possible to save model locally but best trained model is already loaded on the Hugging Face, and used in inferences from Hugging Face so there is no need to train again and save model locally into folders. [Link to model weights](https://huggingface.co/Darebal/mountain-names-ner/tree/main)
 
 ## Setup Instructions
 
@@ -48,7 +48,7 @@ The dataset used in this project contains labeled text data with mountain names 
 - **O**: Non-mountain words.
 - **B-MOUNTAIN**: Beginning of a mountain name.
 - **I-MOUNTAIN**: Inside a mountain name.
-- 
+  
 ### Data Creation Notebook (`dataset_creation.ipynb`)
 This script contains dataset creation from scraping websites, balanced mountain names replacing, tokenizing and bio taging.
 
