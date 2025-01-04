@@ -51,9 +51,9 @@ The dataset used in this project contains labeled text data with mountain names 
 - **I-MOUNTAIN**: Inside a mountain name.
   
 ### Data Creation Notebook (`dataset_creation.ipynb`)
-This script contains dataset creation from scraping websites, balanced mountain names replacing, tokenizing and bio taging.
-[Website 1](https://gikken.co/mate-translate/sentences/english/mountain)
-[Website 2](https://sentence.yourdictionary.com/mountain)
+This script contains dataset creation from scraping websites, balanced mountain names replacing, tokenizing and bio taging. <br>
+[Website 1](https://gikken.co/mate-translate/sentences/english/mountain) <br>
+[Website 2](https://sentence.yourdictionary.com/mountain) <br>
 [Website 3](https://sentence.yourdictionary.com/mountains)
 
 ### Model Training Script (`training.py`)
