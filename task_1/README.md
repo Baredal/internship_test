@@ -48,17 +48,41 @@ jupyter notebook inference_demo.ipynb
 ## Files Overview
 ### Dataset
 The dataset used in this project contains labeled text data with mountain names marked for NER. It was manually created from scraping 3 vocabulary websites. You can find the dataset in the `data/` folder.
-all.csv - contains all original sentences <br>
-train_data.csv and val_data.csv contain data for training and validating, splited in 80-20 way <br>
-train_data_modified.csv and val_data_modified.csv contsins original sentences, new sentences (mountain and mountains words are replaced with mountain names), bio-tags ('O', 'B-MOUNTAIN', 'I-MOUNTAIN') and tags for model training (0, 1 and 2)
+
+- `all.csv`: Contains all original sentences.
+- `train_data.csv` and `val_data.csv`: Contain data for training and validating, split in an 80-20 way.
+- `train_data_modified.csv` and `val_data_modified.csv`: Contain original sentences, new sentences (mountain and mountains words are replaced with mountain names), BIO tags, and tags for model training (0, 1, and 2) corresponding.
+
+#### Labels:
+- **O**: Non-mountain words.
+- **B-MOUNTAIN**: Beginning of a mountain name.
+- **I-MOUNTAIN**: Inside a mountain name.
 
 ### Model Training Script (`training.py`)
-This script fine-tunes a pre-trained BERT-based model (or another suitable architecture) for the NER task. The script loads the dataset, tokenizes the text, and trains the model with appropriate configurations.
+This script fine-tunes a pre-trained BERT-based model for the NER task. The script loads the dataset, tokenizes the text, trains the model with appropriate configurations and saves the best model in 'model_top/' folder based on epochs.
 
 ### Model Inference Script (`inference.py`)
-This script takes a set of sentences and predicts the entity labels (e.g., mountain names) for each token using the trained model.
+This script takes a sentence and returns the entity labels (e.g., mountain names) using the trained model.
 
 ### Demo Notebook (`inference_demo.ipynb`)
-A Jupyter notebook that demonstrates the complete process from dataset preparation to model training and inference. It also showcases the evaluation metrics and results.
+A Jupyter notebook that demonstrates trained model prediction on set of sentences, classifying each token to predicted class
 
+
+## Results and Evaluation
+The evaluation of the NER best model from training process on validation set:
+
+Metric	Value
+eval_loss	0.009353181347250938
+eval_precision	0.9497716894977168
+eval_recall	0.9674418604651163
+eval_f1	0.9585253456221198
+eval_accuracy	0.9968582275166906
+eval_runtime	1.954
+eval_samples_per_second	113.101
+eval_steps_per_second	7.165
+epoch	5.0
+
+
+## Report
+A report containing potential improvements and further optimizations for this task is provided in a PDF file in the root directory.
 
