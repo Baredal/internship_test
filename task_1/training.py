@@ -14,6 +14,8 @@ import json
 warnings.filterwarnings('ignore')
 
 # Define constants for label mapping and training parameters
+# Parameters were selected manually
+# Length of train dataset is 880 - hence training steps 880 and warump steps 0.1 * 880 = 88
 LABEL_LIST = ['O', 'B-MOUNTAIN', 'I-MOUNTAIN']  # List of entity labels
 METRIC = load("seqeval")  # Evaluation metric for sequence labeling
 TAG2ID = {'O': 0, 'B-MOUNTAIN': 1, 'I-MOUNTAIN': 2}  # Map tags to IDs
@@ -21,6 +23,7 @@ BATCH_SIZE = 16  # Batch size for training and evaluation
 NUM_EPOCHS = 5  # Number of training epochs
 WARUMP_STEPS = 88  # Number of warmup steps for learning rate scheduler
 TRAINING_STEPS = 880  # Total training steps
+WEIGHT_DECAY = 0.05 # Weight decay
 
 def compute_metrics(eval_preds):
     """
@@ -120,7 +123,7 @@ def train_model(model, tokenizer):
         save_strategy="epoch",
         num_train_epochs=NUM_EPOCHS,
         load_best_model_at_end=True,
-        weight_decay=0.05
+        weight_decay=WEIGHT_DECAY
     )
 
     # Create a Trainer object for training and evaluation
