@@ -20,8 +20,8 @@ This project requires Python 3.10+.
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/mountain-names-ner.git
-   cd mountain-names-ner
+   git clone https://github.com/Baredal/internship_test.git
+   cd task_1
    
 2. **Install required dependencies:**
    ```bash
@@ -41,7 +41,7 @@ python inference.py
 ```
 
 **Demo Jupyter Notebook:**
-Jupyter notebook is already run but you can run the Jupyter notebook to see the inference:
+Jupyter notebook is already run with provided results for inference but if you want run:
 ```bash
 jupyter notebook inference_demo.ipynb
 ```
@@ -57,9 +57,12 @@ The dataset used in this project contains labeled text data with mountain names 
 - **O**: Non-mountain words.
 - **B-MOUNTAIN**: Beginning of a mountain name.
 - **I-MOUNTAIN**: Inside a mountain name.
+- 
+### Data Creation Notebook (`dataset_creation.ipynb`)
+This script contains dataset creation from scraping websites, balanced mountain names replacing, tokenizing and bio taging.
 
 ### Model Training Script (`training.py`)
-This script fine-tunes a pre-trained BERT-based model for the NER task. The script loads the dataset, tokenizes the text, trains the model with appropriate configurations and saves the best model in 'model_top/' folder based on epochs.
+This script fine-tunes a pre-trained BERT-based model for the NER task. The script loads the dataset, tokenizes the text, trains the model with appropriate configurations, saving each model on each epoch in 'results_model/' and then saves the best model in 'model_top/' folder based on epochs, saves trainer hisory (state) and evaluation results.
 
 ### Model Inference Script (`inference.py`)
 This script takes a sentence and returns the entity labels (e.g., mountain names) using the trained model.
@@ -67,20 +70,26 @@ This script takes a sentence and returns the entity labels (e.g., mountain names
 ### Demo Notebook (`inference_demo.ipynb`)
 A Jupyter notebook that demonstrates trained model prediction on set of sentences, classifying each token to predicted class
 
+### Evaluation results (`evaluation_results.json`)
+Saved results from evaluation on validation set.
+
+### Trainer history (`trainer_state.json`)
+Evaluation of model on each epoch on validation set.
 
 ## Results and Evaluation
 The evaluation of the NER best model from training process on validation set:
 
-Metric	Value
-eval_loss	0.009353181347250938
-eval_precision	0.9497716894977168
-eval_recall	0.9674418604651163
-eval_f1	0.9585253456221198
-eval_accuracy	0.9968582275166906
-eval_runtime	1.954
-eval_samples_per_second	113.101
-eval_steps_per_second	7.165
-epoch	5.0
+| Metric                     | Value                     |
+|----------------------------|---------------------------|
+| eval_loss                  | 0.009353181347250938      |
+| eval_precision             | 0.9497716894977168        |
+| eval_recall                | 0.9674418604651163        |
+| eval_f1                    | 0.9585253456221198        |
+| eval_accuracy              | 0.9968582275166906        |
+| eval_runtime               | 1.954                     |
+| eval_samples_per_second    | 113.101                   |
+| eval_steps_per_second      | 7.165                     |
+| epoch                      | 5.0                       |
 
 
 ## Report
