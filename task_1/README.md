@@ -30,7 +30,7 @@ This project requires Python 3.10+.
 
 ### Running the Code
 **Training Script:**
-To train or fine-tune the NER model, run the following script:
+To train or fine-tune the NER model, run the following script (no need to train, model already saved on hugging face and all inferences uses model from [trained model](https://huggingface.co/Darebal/mountain-names-ner):
 ```bash
 python training.py
 ```
@@ -42,8 +42,8 @@ python inference.py
 ```
 
 **Demo Jupyter Notebook:**
-You can run the Jupyter notebook to see the entire process from dataset preparation to inference:
+Jupyter notebook is already run but you can run the Jupyter notebook to see the inference:
 ```bash
-jupyter notebook demo_notebook.ipynb
+jupyter notebook inference_demo.ipynb
 ```
 
