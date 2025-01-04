@@ -178,7 +178,7 @@ if __name__ == '__main__':
     with open('evaluation_results.json', 'w') as json_file:
         json.dump(evaluation, json_file, indent=1)
 
-    # Save the trained model and tokenizer to a directory
+    # Save the best trained model and tokenizer to a directory
     save_directory = "./model_top"
     model.save_pretrained(save_directory)
     tokenizer.save_pretrained(save_directory)

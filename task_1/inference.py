@@ -2,7 +2,8 @@
 Makes inference of model on sentence to retrieve only mountain names from sentence with their positions indexes
 '''
 from transformers import BertTokenizerFast, BertForTokenClassification, pipeline
-
+import warnings
+warnings.filterwarnings('ignore')
 
 def make_inference(model, tokenizer, sentence):
     """
@@ -33,8 +34,8 @@ if __name__ == '__main__':
 
     # Define the custom label2tag mapping to map label indices to human-readable tags
     label2tag = {'LABEL_1': 'B-MOUNTAIN', 'LABEL_2': 'I-MOUNTAIN'}
-    text = "The valleys between the tilted Beartooth Mountains blocks are smooth and often trough-like, and are often the sites of shallow salt lakes or playas."
-
+    text = "The valleys between the tilted Rocky Mountains blocks are smooth and often trough-like, and are often the sites of shallow salt lakes or playas."
+    print(text)
     mountains = make_inference(model, tokenizer, text)
     for mountain in mountains:
         label = label2tag[mountain['entity']]
