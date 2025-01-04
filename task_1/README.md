@@ -53,7 +53,7 @@ The dataset used in this project contains labeled text data with mountain names 
 This script contains dataset creation from scraping websites, balanced mountain names replacing, tokenizing and bio taging.
 
 ### Model Training Script (`training.py`)
-This script fine-tunes a pre-trained BERT-based model for the NER task. The script loads the dataset, tokenizes the text, trains the model with appropriate configurations, saving each model on each epoch in 'results_model/' and then saves the best model in 'model_top/' folder based on epochs, saves trainer hisory (state) and evaluation results.
+This script fine-tunes a pre-trained BERT-based model for the NER task. The script loads the dataset, tokenizes the text, trains the model with appropriate configurations, saving each model on each epoch in `results_model/` and then saves the best model in `model_top/` folder based on epochs, saves trainer hisory (state) and evaluation results.
 
 ### Model Inference Script (`inference.py`)
 This script takes a sentence and returns the entity labels (e.g., mountain names) using the trained model.
