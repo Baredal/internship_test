@@ -21,7 +21,7 @@ This project requires Python 3.10+.
 
 ### Running the Code
 **Training Script:**
-To train or fine-tune and save the NER model, run the following script (no need to train, model already saved on hugging face and all inferences uses model from [trained model](https://huggingface.co/Darebal/mountain-names-ner):
+To train or fine-tune and save the NER model, run the following script (no need to train, model already saved on Hugging Face and all inferences uses model from [trained model](https://huggingface.co/Darebal/mountain-names-ner):
 ```bash
 python training.py
 ```
