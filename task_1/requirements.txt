@@ -1,0 +1,9 @@
+pandas==1.5.2
+transformers==4.47.1
+datasets==3.2.0
+evaluate==0.4.3
+torch==2.4.0+cu124
+scikit-learn==1.4.1.post1
+beautifulsoup4==4.11.1
+requests==2.32.3
+numpy==1.25.2
