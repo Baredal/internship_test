@@ -43,7 +43,7 @@ The dataset used in this project contains labeled text data with mountain names 
 
 - `all.csv`: Contains all original sentences.
 - `train_data.csv` and `val_data.csv`: Contain data for training and validating, split in an 80-20 way.
-- `train_data_modified.csv` and `val_data_modified.csv`: Contain original sentences, new sentences (mountain and mountains words are replaced with mountain names), BIO tags, and tags for model training (0, 1, and 2) corresponding.
+- `train_data_modified.csv` and `val_data_modified.csv`: Contain original sentences, new sentences (mountain and mountains words are replaced with mountain names), tokens and BIO tags.
 
 #### Labels:
 - **O**: Non-mountain words.
