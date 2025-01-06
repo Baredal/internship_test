@@ -1,4 +1,4 @@
-# Satellite Image Matcher with LoFTR
+# Satellite Image Matcher with SIFT-LightGlue and LoFTR
 
 Mmatching keypoints between satellite images using the LoFTR (Local Feature TRansformer) model and SIFT+LightBlue model. This project supports keypoint matching, inlier calculation, and visualization of matches.
 
@@ -12,11 +12,8 @@ Mmatching keypoints between satellite images using the LoFTR (Local Feature TRan
 
 ---
 
-## Installation
+## Notes
+To advance the installed models, you need to install them locally from the official repository. You will also need to download the dataset from the keg. That's why I attach a link to a laptop with the libraries and inferencom installed, results and visualizations of the algorithms.
+[Satellite Dataset]('https://www.kaggle.com/datasets/isaienkov/deforestation-in-ukraine') <br>
+[SIFT-LightGlue]('https://github.com/cvg/LightGlue/tree/main) <br>
 
-### Prerequisites
-
-- Python 3.8+
-- PyTorch (with CUDA support for faster computations)
-- Kornia (for image processing and feature matching)
-- OpenCV (for image transformations and matrix estimation)
