@@ -145,14 +145,15 @@ class SatelliteImageMatcherSIFTLightGlue:
         viz2d.plot_matches(self.m_kpts_1, self.m_kpts_2, color="lime", lw=0.2)
 
 if __name__ == '__main__':
-  # Example of usage
-  img_1, img_2 = # Here should be loaded photos in RGB format
-  matcher_sift_lightblue.match_images(img_1, img_2)
-  inliers = matcher_sift_lightblue.calculate_inliers()
-  if inliers is not None:
-      print(f"Total Keypoints Image 1: {len(inliers['keypoints_0'])}")
-      print(f"Total Keypoints Image 2: {len(inliers['keypoints_1'])}")
-      print(f"Total Matches: {len(inliers['matches'])}")
-      print(f"Number of Inliers: {np.sum(inliers['inliers']) if inliers['inliers'] is not None else 0}")
-      print(f"Inlier Ratio: {inliers['inlier_ratio']:.2f}")
-  matcher_sift_lightblue.visualize_keypoints_matches()
+    # Example of usage
+    matcher_sift_lightblue = SatelliteImageMatcherSIFTLightGlue()
+    img_1, img_2 = # Here should be loaded photos in RGB format
+    matcher_sift_lightblue.match_images(img_1, img_2)
+    inliers = matcher_sift_lightblue.calculate_inliers()
+    if inliers is not None:
+        print(f"Total Keypoints Image 1: {len(inliers['keypoints_0'])}")
+        print(f"Total Keypoints Image 2: {len(inliers['keypoints_1'])}")
+        print(f"Total Matches: {len(inliers['matches'])}")
+        print(f"Number of Inliers: {np.sum(inliers['inliers']) if inliers['inliers'] is not None else 0}")
+        print(f"Inlier Ratio: {inliers['inlier_ratio']:.2f}")
+    matcher_sift_lightblue.visualize_keypoints_matches()
