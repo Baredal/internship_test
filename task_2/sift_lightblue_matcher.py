@@ -6,7 +6,7 @@ import os
 import torch
 import cv2
 import torch
-from lightglue import LightGlue, SIFT
+from lightglue import LightGlue, SIFT, viz2d
 from lightglue.utils import load_image, rbd, read_image
 
 class SatelliteImageMatcherSIFTLightGlue:
