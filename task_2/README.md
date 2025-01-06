@@ -1,6 +1,6 @@
 # Satellite Image Matcher with SIFT-LightGlue and LoFTR
 
-Mmatching keypoints between satellite images using the LoFTR (Local Feature TRansformer) model and SIFT+LightGlue model. This task supports keypoint matching, inlier calculation, and visualization of matches.
+Matching keypoints between satellite images using the LoFTR (Local Feature TRansformer) model and SIFT+LightGlue model. This task supports keypoint matching, inlier calculation, and visualization of matches.
 
 ---
 
