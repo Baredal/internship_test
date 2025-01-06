@@ -74,8 +74,8 @@ class SatelliteImageMatcherSIFTLightGlue:
         image_2 = cv2.cvtColor(image_2, cv2.COLOR_RGB2GRAY)
         image_1 = self.__normalize_image(image_1)
         image_2 = self.__normalize_image(image_2)
-        feats_1 = extractor.extract(image_1)
-        feats_2 = extractor.extract(image_2)
+        feats_1 = self.extractor.extract(image_1)
+        feats_2 = self.extractor.extract(image_2)
         matches_1_2 = self.lightglue({"image0": feats_1, "image1": feats_2})
         feats_1, feats_2, matches_1_2 = [
             rbd(x) for x in [feats_1, feats_2, matches_1_2]
