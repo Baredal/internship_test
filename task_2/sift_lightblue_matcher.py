@@ -135,7 +135,6 @@ class SatelliteImageMatcherSIFTLightGlue:
         """
         Visualize keypoints and matches between two images.
         """
-        from lightglue import viz2d
         kpc0, kpc1 = viz2d.cm_prune(self.matches_1_2["prune0"]), viz2d.cm_prune(self.matches_1_2["prune1"])
         viz2d.plot_images([self.image_1, self.image_2])
         viz2d.plot_keypoints([self.kpts_1, self.kpts_2], colors=[kpc0, kpc1], ps=10)
