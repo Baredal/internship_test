@@ -86,7 +86,7 @@ The evaluation of the NER best model from training process on validation set:
 | eval_steps_per_second      | 7.165                     |
 | epoch                      | 5.0                       |
 
-Overall, model is able to distinguish well between known mountains in sentences, whether it is one mountain or several mountains in a sentence. Also, compound mountain names (more than one word) she can distinguish well. Difficulties arise with local or specific mountain names, the model simply does not understand and sometimes misses such mountains
+Overall, model is able to distinguish well between known mountains in sentences, whether it is one mountain or several mountains in a sentence. Also, compound mountain names (more than one word) she can distinguish well. Difficulties arise with local or specific mountain names, the model simply does not understand and sometimes misses such mountains. Model struggles when it comes to recognize mountains names in context e.g. 'Cafe Mont Black' and 'I was in the Mont Black mountain' will be both classified 'Mont Blanc' as mountain name
 
 ## Report
 A report containing potential improvements and further optimizations for this task is provided in a PDF file in the root directory.
