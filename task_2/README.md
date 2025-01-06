@@ -14,6 +14,6 @@ Mmatching keypoints between satellite images using the LoFTR (Local Feature TRan
 
 ## Notes
 To advance the installed models, you need to install them locally from the official repository. You will also need to download the dataset from the keg. That's why I attach a link to a laptop with the libraries and inferencom installed, results and visualizations of the algorithms.
-[Satellite Dataset]('https://www.kaggle.com/datasets/isaienkov/deforestation-in-ukraine') <br>
-[SIFT-LightGlue]('https://github.com/cvg/LightGlue/tree/main) <br>
+[Satellite Dataset](https://www.kaggle.com/datasets/isaienkov/deforestation-in-ukraine) <br>
+[SIFT-LightGlue](https://github.com/cvg/LightGlue/tree/main) <br>
 
